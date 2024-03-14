@@ -17,13 +17,8 @@ const requestListener = (req, res) => {
         body += chunk;
     });
 
-    const dataFalse = {
-        "status": "false",
-        "data": "無此網站路由"
-    }
-
-    console.log("URL", req.url);
-    console.log("Method", req.method);
+    // console.log("URL", req.url);
+    // console.log("Method", req.method);
 
     if(req.url == "/todos" && req.method == "GET"){
         res.writeHead(200, headers);
@@ -111,9 +106,6 @@ const requestListener = (req, res) => {
         res.writeHead(200, headers);
         res.end();
     } else {
-        // res.writeHead(404, headers);
-        // res.write(JSON.stringify(dataFalse));
-        // res.end();
         errNotFound(res);
     }
 }
