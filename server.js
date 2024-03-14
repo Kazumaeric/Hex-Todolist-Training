@@ -14,7 +14,7 @@ const requestListener = (req, res) => {
     let body = "";
 
     req.on('data', (chunk) => {
-        body += chunk.toString();
+        body += chunk;
     });
 
     const dataFalse = {
