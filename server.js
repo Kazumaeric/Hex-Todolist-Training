@@ -119,7 +119,7 @@ const requestListener = (req, res) => {
 }
 
 const server = http.createServer(requestListener);
-server.listen(3005);
+server.listen(process.env.PORT || 3005);
 
 console.log('Server is running');
 
